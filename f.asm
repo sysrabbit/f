@@ -36,30 +36,30 @@ global _start
 
 section .text
 _start:
-	mov rdi, f
-	call thread_create
-	mov rdi, f
-	call thread_create
     mov rdi, f
-	call thread_create
+    call thread_create
+    mov rdi, f
+    call thread_create
+    mov rdi, f
+    call thread_create
     call f
 thread_create:
-	push rdi
-	call stack_create
-	lea rsi, [rax + STACK_SIZE - 8]
-	pop qword [rsi]
-	mov rdi, THREAD_FLAGS
-	mov rax, SYS_clone
-	syscall
-	ret
+    push rdi
+    call stack_create
+    lea rsi, [rax + STACK_SIZE - 8]
+    pop qword [rsi]
+    mov rdi, THREAD_FLAGS
+    mov rax, SYS_clone
+    syscall
+    ret
 stack_create:
-	mov rdi, 0
-	mov rsi, STACK_SIZE
-	mov rdx, PROT_WRITE | PROT_READ
-	mov r10, MAP_ANONYMOUS | MAP_PRIVATE | MAP_GROWSDOWN
-	mov rax, SYS_mmap
-	syscall
-	ret
+    mov rdi, 0
+    mov rsi, STACK_SIZE
+    mov rdx, PROT_WRITE | PROT_READ
+    mov r10, MAP_ANONYMOUS | MAP_PRIVATE | MAP_GROWSDOWN
+    mov rax, SYS_mmap
+    syscall
+    ret
 f:
     mov     edx,len
     mov     ecx,msg
