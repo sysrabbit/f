@@ -1,0 +1,10 @@
+## Blacklist everything
+/*
+
+## Create a whitelist
+!*.asm
+!.gitignore
+!LICENSE
+!Makefile
+!README.md
+
