@@ -1,6 +1,6 @@
 ## f
 
-If it wasn't obvious, this program was a joke I created for internet points when someone decided to do the above task in python, then someone one upped them in c, I felt my self capable of one upping them in assembly.
+A simple program to pay respects at maximum throughput
 
 ## Features
 
@@ -15,3 +15,7 @@ If it wasn't obvious, this program was a joke I created for internet points when
 
 ## License
 [![License: GPL v3](https://img.shields.io/github/license/borderm/f.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+---
+
+This exists for satirical reasons
